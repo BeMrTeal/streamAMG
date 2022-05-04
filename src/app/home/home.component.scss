@@ -1,0 +1,142 @@
+h1 {
+  font-family: 'Nimbus Sans Extd';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 103px;
+  line-height: 124px;
+}
+
+h3 {
+  font-family: 'Nimbus Sans Extd';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+}
+
+.btn-group-fighters {
+  width: 100%;
+}
+
+.btn-fighter {
+  margin-top: 30px;
+  background-color: #000;
+  border-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  opacity: 0.5;
+}
+
+.btn-fight-time {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  font-family: 'Nimbus Sans Cond L';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 68px;
+}
+
+.active-time {
+  color: rgba(255, 255, 255, 1);
+}
+
+.active {
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.fighter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: "Nimbus Sans Cond L";
+  font-style: normal;
+  font-weight: 900;
+  &-name {
+    width: 100%;
+    color: #d2b085;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &-surname {
+    width: 100%;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #fff;
+  }
+}
+
+.versus {
+  font-family: "Nimbus Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #d2b085;
+}
+
+.form {
+  list-style: none;
+}
+.form > div {
+  position: relative;
+}
+.form > div:before {
+  content: "\25CF";
+  margin-right: 10px;
+  margin-top: 50px;
+  font-size: 20px;
+  z-index: 999;
+  color: #D43B38;
+}
+.form > div:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  border-left: 2px solid #D43B38;
+  margin-left: 5px;
+  height: 100%;
+}
+.form > div:first-of-type:before {
+  top: 50%;
+}
+.form > div:last-of-type:before {
+  color: #d2b085;
+}
+.form > div:first-of-type:after {
+  top: 65%;
+}
+.form > div:last-of-type:after {
+  top: -35%;
+}
+
+.fight-time {
+  font-family: 'Nimbus Sans Cond L';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  display: block;
+}
+
+.fight-time-eta {
+  padding-top: 40px;
+  margin-bottom: -40px;
+  z-index: 99;
+}
