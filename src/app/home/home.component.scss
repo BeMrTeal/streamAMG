@@ -1,5 +1,81 @@
+h1,
+  h3 {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .btn-fight-time {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    font-family: "Nimbus Sans Cond L";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 23px;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 8px 11px;
+  }
+  .fight-time-eta {
+    margin-bottom: 10px;
+    margin-left: 13px;
+  }
+
+  .active {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .active-shadow {
+    filter: drop-shadow(0 0 3px #d43b38);
+  }
+
+  ul {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bar li {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    width: 20%;
+  }
+
+  .bar li:before {
+    content: "\25CF";
+    font-size: 20px;
+    z-index: 999;
+    color: #d43b38;
+  }
+
+  .bar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #d43b38;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+  }
+
+  .bar li:first-child:after {
+    left: 50%;
+  }
+  .bar li:last-child:after {
+    left: -50%;
+  }
+  .bar li:last-child:before {
+    color: #d2b085;
+  }
+
+
+@media screen and (min-width: 480px) {
+
 h1 {
-  font-family: 'Nimbus Sans Extd';
+  font-family: "Nimbus Sans Extd";
   font-style: normal;
   font-weight: 400;
   font-size: 103px;
@@ -7,7 +83,7 @@ h1 {
 }
 
 h3 {
-  font-family: 'Nimbus Sans Extd';
+  font-family: "Nimbus Sans Extd";
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -21,8 +97,8 @@ h3 {
 
 .btn-fighter {
   margin-top: 30px;
-  background-color: #000;
-  border-color: #000;
+  background-color: transparent;
+  border-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +112,7 @@ h3 {
   margin-top: 30px;
   color: rgba(255, 255, 255, 0.5);
   opacity: 1;
-  font-family: 'Nimbus Sans Cond L';
+  font-family: "Nimbus Sans Cond L";
   font-style: normal;
   font-weight: 900;
   font-size: 25px;
@@ -102,14 +178,14 @@ h3 {
   margin-top: 50px;
   font-size: 20px;
   z-index: 999;
-  color: #D43B38;
+  color: #d43b38;
 }
 .form > div:after {
   position: absolute;
   left: 0;
   top: 0;
   content: "";
-  border-left: 2px solid #D43B38;
+  border-left: 2px solid #d43b38;
   margin-left: 5px;
   height: 100%;
 }
@@ -127,7 +203,7 @@ h3 {
 }
 
 .fight-time {
-  font-family: 'Nimbus Sans Cond L';
+  font-family: "Nimbus Sans Cond L";
   font-style: normal;
   font-weight: 900;
   font-size: 25px;
@@ -139,4 +215,5 @@ h3 {
   padding-top: 40px;
   margin-bottom: -40px;
   z-index: 99;
+}
 }

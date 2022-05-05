@@ -1,32 +1,66 @@
-<div class="container mt-5 py-4 px-3">
-  <h1>
-    <span *ngFor="let t of title; let even = even; let odd = odd" [ngClass]="{even: even, odd: odd}">{{t}}</span>
-  </h1>
-  <h3>SUNDAY, DECEMBER 07 2019 - 10PM <br>
-    DIRIYAH, SAUDI ARABIA</h3>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-1">
-      <p class="text-center fight-time-eta">(ETA)</p>
-      <div *ngFor="let t of matches">
-        <a class="btn btn-fight-time" [ngClass]="radioModel === t.image ? 'active-time' : ''">{{t.time}}</a>
-      </div>
-    </div>
-    <div class="col-5 d-flex align-items-center">
-      <div class="form">
-        <div class="btn-group btn-group-fighters" btnRadioGroup [(ngModel)]="radioModel" *ngFor="let m of matches; let i = index">
-          <label class="btn btn-fighter mb-0" btnRadio="{{m.image}}"><div class="fighter"><span class="fighter-name">{{m.fighters[0].name}}</span> <span class="fighter-surname">{{m.fighters[0].surname}}</span></div> <div class="versus">vs</div> <div class="fighter"><span class="fighter-name">{{m.fighters[1].name}}</span> <span [ngClass]="radioModel ? 'fighter-surname' : 'fighter-surname-active'" >{{m.fighters[1].surname}}</span></div></label>
+<div *ngIf="!isMobile">
+  <div class="container mt-5 py-4 px-3">
+    <h1>
+      <span *ngFor="let t of title; let even = even; let odd = odd" [ngClass]="{even: even, odd: odd}">{{t}}</span>
+    </h1>
+    <h3>SUNDAY, DECEMBER 07 2019 - 10PM <br>
+      DIRIYAH, SAUDI ARABIA</h3>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <p class="text-center fight-time-eta">(ETA)</p>
+        <div *ngFor="let t of matches">
+          <a class="btn btn-fight-time" [ngClass]="radioModel === t.image ? 'active-time' : ''">{{t.time}}</a>
         </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div>
-        <ng-container *ngIf="radioModel">
-          <img [ngClass]="!radioModel ? 'fade-out': 'fade-in'" src="../../assets/images/{{radioModel}}" alt="">
-        </ng-container>
+      <div class="col-5 d-flex align-items-center">
+        <div class="form">
+          <div class="btn-group btn-group-fighters" btnRadioGroup [(ngModel)]="radioModel" *ngFor="let m of matches; let i = index">
+            <label class="btn btn-fighter mb-0" btnRadio="{{m.image}}"><div class="fighter"><span class="fighter-name">{{m.fighters[0].name}}</span> <span class="fighter-surname">{{m.fighters[0].surname}}</span></div> <div class="versus">vs</div> <div class="fighter"><span class="fighter-name">{{m.fighters[1].name}}</span> <span [ngClass]="radioModel ? 'fighter-surname' : 'fighter-surname-active'" >{{m.fighters[1].surname}}</span></div></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div>
+          <ng-container *ngIf="radioModel">
+            <img [ngClass]="!radioModel ? 'fade-out': 'fade-in'" src="../../assets/images/{{radioModel}}" alt="">
+          </ng-container>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<div *ngIf="isMobile">
+  <div class="container mt-5 py-4 px-3">
+    <h1>
+      <span *ngFor="let t of title; let even = even; let odd = odd" [ngClass]="{even: even, odd: odd}">{{t}}</span>
+    </h1>
+    <h3>SUNDAY, DECEMBER 07 2019 - 10PM <br>
+      DIRIYAH, SAUDI ARABIA</h3>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-left fight-time-eta">(ETA)</p>
+        <div class="form">
+          <div class="btn-group btn-group-fighters" btnRadioGroup [(ngModel)]="radioModel" *ngFor="let m of matches; let i = index">
+            <label class="btn btn-fight-time" btnRadio="{{m.image}}">{{m.time}}</label>
+          </div>
+          <ul class="bar">
+            <li [ngClass]="radioModel === m.image ? 'active-shadow' : ''" *ngFor="let m of matches; let i = index"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <div>
+          <ng-container *ngIf="radioModel">
+            <img [ngClass]="!radioModel ? 'fade-out': 'fade-in'" src="../../assets/images/{{radioModel}}" alt="">
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

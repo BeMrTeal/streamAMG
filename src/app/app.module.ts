@@ -6,20 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { MobileComponent } from './mobile/mobile.component';
-import { DesktopComponent } from './desktop/desktop.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MobileComponent,
-    DesktopComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
+    PlatformModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
